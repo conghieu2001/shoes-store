@@ -1,0 +1,72 @@
+{{#section 'title'}}
+    Nam
+{{/section}}
+
+<div
+    id='banner'
+    class='img-fluid'
+    style='background-image: url(https://file.hstatic.net/1000230642/collection/web_banner___phien_ban_40_nam_dcc89c653e48402e9d9b5d22b29612b9.png);'
+>
+</div>
+<div class='container pt-5 pb-5'>
+    <div class='row'>
+        <div class='col-9 d-flex align-items-baseline'>
+            <i class='fa-solid fa-filter pe-2'></i>
+            <select  name="action" type="submit"
+                class='form-select me-2'
+                aria-label='Default select example'
+            >
+                <option>Sản phẩm</option>
+                <option value='1'>Giày</option>
+                <option value='2'>Dép</option>
+                <option value='3'>Sandal</option>
+            </select>
+            <select class='form-select' aria-label='Default select example'>
+                <option>Giá</option>
+                <option value='1'>Tăng dần</option>
+                <option value='2'>Giảm dần</option>
+            </select>
+        </div>
+        <div class='col-3'>
+            <select class='form-select' aria-label='Default select example'>
+                <option>Sắp xếp theo</option>
+                <option value='1'>Từ A->Z</option>
+                <option value='2'>Từ Z->A</option>
+            </select>
+        </div>
+    </div>
+    <div class='row pt-5'>
+        {{#each nam}}
+            <div class='col-lg-3 col-6 col-md-4'>
+                <div class='col-item'>
+                    <div class='col-item-img'>
+                        <a href='/products/{{this.id}}'>
+                            <img
+                                src='{{this.image}}'
+                                alt=''
+                                class='item-img item-img-first'
+                            />
+                        </a>
+                    </div>
+                    <div class='item-info'>
+                        <h3 class='item-name'><a
+                                class='item-name-link'
+                                href='/products/{{this.slug}}'
+                                title='{{this.description}}'
+                            >
+                                {{this.description}}</a></h3>
+                        <p class="item-name-db" hidden>{{this.name}}</p>
+                    </div>
+                    <div class='d-flex justify-content-between'>
+                        <p class="item-id" value="{{this.id}}" hidden>{{this.id}}</p>
+                        <p class='item-price mb-0 mt-1'>{{this.price}}</p>
+                        <p class="item-loai" hidden>{{this.loai_id}}</p>
+                        <div
+                                class='add-to-cart' title="Thêm vào giỏ hàng"
+                            ><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

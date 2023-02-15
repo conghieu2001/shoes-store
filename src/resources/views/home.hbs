@@ -1,0 +1,293 @@
+{{#section 'title'}}
+    Trang Chủ
+{{/section}}
+
+<div id='banner' class='img-fluid'></div>
+
+<section class='container'>
+    <div class='text-center w-100 mt-5'>
+        <div
+            id='carouselExampleControls'
+            class='carousel slide'
+            data-bs-ride='carousel'
+        >
+            <div class='carousel-inner'>
+                <div class='carousel-item active'>
+                    <p><b>Miễn phí vận chuyển</b> với hóa đơn trên 1 triệu</p>
+                </div>
+                <div class='carousel-item'>
+                    <p><b>Hỗ trợ đổi size</b>
+                        Tại tất cả các cửa hàng trong 1 tuần</p>
+                </div>
+            </div>
+            <button
+                class='carousel-control-prev'
+                type='button'
+                data-bs-target='#carouselExampleControls'
+                data-bs-slide='prev'
+            >
+                <span class='' aria-hidden='true'>
+                    <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='32'
+                        height='32'
+                        fill=''
+                        class='bi bi-chevron-compact-left'
+                        viewBox='0 0 16 16'
+                    >
+                        <path
+                            fill-rule='evenodd'
+                            d='M9.224 1.553a.5.5 0 0 1 .223.67L6.56 8l2.888 5.776a.5.5 0 1 1-.894.448l-3-6a.5.5 0 0 1 0-.448l3-6a.5.5 0 0 1 .67-.223z'
+                        ></path>
+                    </svg>
+                </span>
+                <span class='visually-hidden'>Previous</span>
+            </button>
+            <button
+                class='carousel-control-next'
+                type='button'
+                data-bs-target='#carouselExampleControls'
+                data-bs-slide='next'
+            >
+                <span class='' aria-hidden='true'>
+                    <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='32'
+                        height='32'
+                        fill=''
+                        class='bi bi-chevron-right active'
+                        viewBox='0 0 16 16'
+                    >
+                        <path
+                            fill-rule='evenodd'
+                            d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'
+                        ></path>
+                    </svg>
+                </span>
+                <span class='visually-hidden'>Next</span>
+            </button>
+        </div>
+    </div>
+    <div class='mt-5'>
+        <div class='row three-banner'>
+            <div class='mb-3 col-sm-4'><a class='bannerEffect' href='#'><img
+                        class='w-100'
+                        src='/images/img-banner/main1.jpg'
+                        alt='banner1'
+                    /></a></div>
+            <div class='mb-3 col-sm-4'><a class='bannerEffect' href='#'><img
+                        class='w-100'
+                        src='/images/img-banner/main2.jpg'
+                        alt='banner2'
+                    /></a></div>
+            <div class='mb-3 col-sm-4'><a class='bannerEffect' href='#'><img
+                        class='w-100'
+                        src='https://file.hstatic.net/200000522597/file/4_510x275_63bbf2e07bbf4510bc673944c9ddf028.jpg'
+                        alt='banner3'
+                    /></a></div>
+        </div>
+    </div>
+</section>
+<section class='container product-dep'>
+    <div class='product-dep-01'>
+        <div class='section-head text-center mt-3 mb-4'>
+            <h4>GIÀY THỂ THAO NỮ</h4>
+        </div>
+        <div class='section-main row'>
+            {{#each homeGNu}}
+            <div class='col-lg-3 col-6 col-md-4'>
+                <div class='col-item'>
+                    <div class='col-item-img'>
+                        <a href='/products/{{this.id}}'>
+                            <img
+                                src='{{this.image}}'
+                                alt=''
+                                class='item-img item-img-first'
+                            />
+                        </a>
+                    </div>
+                    <div class='item-info'>
+                        <h3 class='item-name'><a
+                                class='item-name-link'
+                                href='/products/{{this.id}}'
+                                title='{{this.description}}'
+                            >
+                                {{this.description}}</a></h3>
+                        <p class="item-name-db" hidden>{{this.name}}</p>
+                    </div>
+                    <div class='d-flex justify-content-between'>
+                        <p class="item-id" value="{{this.id}}" hidden>{{this.id}}</p>
+                        <p class='item-price mb-0 mt-1'>{{this.price}}</p>
+                        <p class="item-loai" hidden>{{this.loai_id}}</p>
+                        <div
+                                class='add-to-cart' title="Thêm vào giỏ hàng"
+                            ><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class='section-foot text-center'>
+            <p style='font-size: 22px; text-decoration:underline;' class='pt-1'>
+                <a href='/collections/nu' style='color: #000;'>
+                    <i class='fa fa-angle-double-right'></i>
+                    Xem tất cả sản phẩm
+                    <i class='fa fa-angle-double-left'></i>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class='product-dep-02'>
+        <div class='section-head text-center mt-3 mb-4'>
+            <h4>GIÀY THỂ THAO NAM</h4>
+        </div>
+        <div class='section-main row'>
+            {{#each homeGNam}}
+            <div class='col-lg-3 col-6 col-md-4'>
+                <div class='col-item'>
+                    <div class='col-item-img'>
+                        <a href='/products/{{this.id}}'>
+                            <img
+                                src='{{this.image}}'
+                                alt=''
+                                class='item-img item-img-first'
+                            />
+                        </a>
+                    </div>
+                    <div class='item-info'>
+                        <h3 class='item-name'><a
+                                class='item-name-link'
+                                href='/products/{{this.id}}'
+                                title='{{this.description}}'
+                            >
+                                {{this.description}}</a></h3>
+                        <p class="item-name-db" hidden>{{this.name}}</p>
+                    </div>
+                    <div class='d-flex justify-content-between'>
+                        <p class="item-id" value="{{this.id}}" hidden>{{this.id}}</p>
+                        <p class='item-price mb-0 mt-1'>{{this.price}}</p>
+                        <p class="item-loai" hidden>{{this.loai_id}}</p>
+                        <div
+                                class='add-to-cart' title="Thêm vào giỏ hàng"
+                            ><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class='section-foot text-center'>
+            <p style='font-size: 22px; text-decoration:underline;' class='pt-1'>
+                <a href='/collections/nam' style='color: #000;'>
+                    <i class='fa fa-angle-double-right'></i>
+                    Xem tất cả sản phẩm
+                    <i class='fa fa-angle-double-left'></i>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class='product-dep-03'>
+        <div class='section-head text-center mt-3 mb-4'>
+            <h4>SANDAL NỮ</h4>
+        </div>
+        <div class='section-main row'>
+            {{#each homeDNu}}
+            <div class='col-lg-3 col-6 col-md-4'>
+                <div class='col-item'>
+                    <div class='col-item-img'>
+                        <a href='/products/{{this.id}}'>
+                            <img
+                                src='{{this.image}}'
+                                alt=''
+                                class='item-img item-img-first'
+                            />
+                        </a>
+                    </div>
+                    <div class='item-info'>
+                        <h3 class='item-name'><a
+                                class='item-name-link'
+                                href='/products/{{this.id}}'
+                                title='{{this.description}}'
+                            >
+                                {{this.description}}</a></h3>
+                        <p class="item-name-db" hidden>{{this.name}}</p>
+                    </div>
+                    <div class='d-flex justify-content-between'>
+                        <p class="item-id" value="{{this.id}}" hidden>{{this.id}}</p>
+                        <p class='item-price mb-0 mt-1'>{{this.price}}</p>
+                        <p class="item-loai" hidden>{{this.loai_id}}</p>
+                        <div
+                                class='add-to-cart' title="Thêm vào giỏ hàng"
+                            ><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class='section-foot text-center'>
+            <p style='font-size: 22px; text-decoration:underline;' class='pt-1'>
+                <a href='/collections/nu' style='color: #000;'>
+                    <i class='fa fa-angle-double-right'></i>
+                    Xem tất cả sản phẩm
+                    <i class='fa fa-angle-double-left'></i>
+                </a>
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class='product-dep-04'>
+        <div class='section-head text-center mt-3 mb-4'>
+            <h4>SANDAL NAM</h4>
+        </div>
+        <div class='section-main row'>
+            {{#each homeDNam}}
+            <div class='col-lg-3 col-6 col-md-4'>
+                <div class='col-item'>
+                    <div class='col-item-img'>
+                        <a href='/products/{{this.id}}'>
+                            <img
+                                src='{{this.image}}'
+                                alt=''
+                                class='item-img item-img-first'
+                            />
+                        </a>
+                    </div>
+                    <div class='item-info'>
+                        <h3 class='item-name'><a
+                                class='item-name-link'
+                                href='/products/{{this.id}}'
+                                title='{{this.description}}'
+                            >
+                                {{this.description}}</a></h3>
+                        <p class="item-name-db" hidden>{{this.name}}</p>
+                    </div>
+                    <div class='d-flex justify-content-between'>
+                        <p class="item-id" value="{{this.id}}" hidden>{{this.id}}</p>
+                        <p class='item-price mb-0 mt-1'>{{this.price}}</p>
+                        <p class="item-loai" hidden>{{this.loai_id}}</p>
+                        <div
+                                class='add-to-cart' title="Thêm vào giỏ hàng"
+                            ><i class="fa-sharp fa-solid fa-cart-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+        <div class='section-foot text-center'>
+            <p style='font-size: 22px; text-decoration:underline;' class='pt-1'>
+                <a href='/collections/nam' style='color: #000;'>
+                    <i class='fa fa-angle-double-right'></i>
+                    Xem tất cả sản phẩm
+                    <i class='fa fa-angle-double-left'></i>
+                </a>
+            </p>
+        </div>
+    </div>
+</section>

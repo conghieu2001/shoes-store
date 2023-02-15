@@ -1,0 +1,40 @@
+{{!-- <head>
+    <link rel='stylesheet' href='/css/headerShowProduct.css' />
+</head> --}}
+{{#section 'title'}}
+    Create
+{{/section}}
+
+<div class="container pt-5 pb-5">
+    <h3>Thêm sản phẩm mới</h3>
+
+    <form method="POST" action="/products/store">
+      <div class="mb-3">
+        <label for="name" class="form-label">Tên sản phẩm:</label>
+        <input name="name" type="text" class="form-control" id="name" placeholder="Nhập tên sản phẩm" required>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Mô tả sản phẩm:</label>
+        <input name="description" type="text" class="form-control" id="description" placeholder="Nhập Mô tả sản phẩm" required>
+      </div>
+      <div class="mb-3">
+        <label for="image" class="form-label">Thêm hình ảnh:</label>
+        <input name="image" type="text" class="form-control" id="image" placeholder="Thêm hình ảnh" required>
+      </div>
+      <div class="mb-3">
+        <label for="price" class="form-label">Giá sản phẩm:</label>
+        <input name="price" type="text" class="form-control" id="price" placeholder="Nhập Giá sản phẩm" required>
+      </div>
+      <div class="mb-3">
+        <label for="loai" class="form-label">Chọn loại sản phẩm:</label>
+        {{!-- <input name="loai" type="text" class="form-control" id="loai" placeholder="Nhập tên sản phẩm"> --}}
+        <select class="form-select" aria-label="Default select example" name="loai_id" id="loai_id" required>
+          <option value="1">giày nam</option>
+          <option value="2">sandal nam</option>
+          <option value="3">giày nữ</option>
+          <option value="4">sandan nữ</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Thêm</button>
+</form>
+</div>

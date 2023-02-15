@@ -1,0 +1,82 @@
+{{#section 'title'}}
+    Trang Chủ Admin
+{{/section}}
+
+
+<div class="container pt-5 pb-5">
+    <div class="d-flex justify-content-between align-items-baseline">
+      <h3>Tất cả sản phẩm</h3>
+    </div>
+    <table class="table mt-4">
+        <thead>
+            <tr>
+            <th scope="col">#</th>
+            <th scope="col">Tên sản phẩm</th>
+            <th scope="col">Mô tả</th>
+            <th scope="col">Giá</th>
+            {{!-- <th scope="col">Loại</th> --}}
+            <th scope="col" colspan="2"></th>
+            </tr>
+        </thead>
+  <tbody>
+    {{#each storedproduct}}
+    <tr>
+        <th scope="row">{{sum @index 1}}</th>
+        <td>{{this.name}}</td>
+        <td>{{this.description}}</td>
+        <td>{{this.price}}</td>
+        {{!-- <td>{{this.loai}}</td> --}}
+        <td><a href="/products/edit/{{this.id}}" class="btn btn-info"><i class="fa-solid fa-pen-to-square"></i></a></td>
+        <td><a href="" class="btn btn-info" data-bs-toggle="modal" data-id="{{this.id}}" data-bs-target="#exampleModal"><i class="fa-solid fa-trash-can"></i></a></td>
+    </tr>
+    {{else}}
+    <tr>
+      <td class="text-center" colspan="7">Danh mục sản phẩm hiện chưa có
+          <a href="/products/create">Thêm sản phẩm.</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
+
+{{!-- Đồng ý xóa --}}
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Xóa sản phẩm</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Bạn có chắc chắn muốn xóa sản phẩm này?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Không</button>
+        <button type="button" class="btn btn-danger" id="confirmDelete">Có</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- Delete form --}}
+<form method="POST" name="deleteForm">
+</form>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var productId;
+        var deleteForm = document.forms['deleteForm'];
+        var confirmDelete = document.getElementById('confirmDelete');
+
+        $('#exampleModal').on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget);
+        productId = button.data('id');
+        });
+
+        confirmDelete.onclick = function() {
+            deleteForm.action = '/products/' + productId + '?_method=DELETE';
+            deleteForm.submit();
+        }
+    })
+</script>

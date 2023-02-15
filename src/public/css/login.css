@@ -1,0 +1,33 @@
+
+
+.wrapper {	
+	/* margin-top: 80px;
+    margin-bottom: 80px; */
+    padding-top: 140px;
+    background: #f0eeee;
+    min-height: 550px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  border: 1px solid rgba(0,0,0,0.1);  
+  box-shadow:  8px 8px 0px #5a5a5a,
+             -8px -8px 0px #ffffff;
+  background: rgb(251, 249, 249) !important;
+}
+.form-signin-heading{
+	  margin-bottom: 30px;
+}
+
+.button-submit {
+    background-color: rgb(208, 208, 246);
+    width: 90px;
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+}
+.button-submit:hover {
+    background-color: rgb(152, 152, 245);
+}

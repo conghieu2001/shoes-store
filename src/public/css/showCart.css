@@ -1,0 +1,30 @@
+.showProductCart {
+    min-height: 80%;
+}
+.myCart {
+    padding-right: 10px;
+}
+.titlePage p {
+    font-size: 20px;
+}
+.countProductInCart {
+    border: 1px solid gray;
+}
+.item-img {
+    margin-left: 10px;
+    width: 80%;
+}
+.updown, .trash-div, .price-div {
+    padding-top: 2rem;
+}
+.sum, .toPay {
+    margin-left: 68rem;
+}
+/* .noItem {
+    display: none;
+} */
+/* trang thanh toan */
+.thanh-toan {
+    min-height: 80%;   
+}
+

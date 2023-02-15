@@ -1,0 +1,46 @@
+{{!-- <head>
+    <link rel='stylesheet' href='/css/headerShowProduct.css' />
+</head> --}}
+{{#section 'title'}}
+    Edit
+{{/section}}
+
+<div class="container pt-5 pb-5">
+    <h3>Chỉnh sửa sản phẩm</h3>
+{{#each editproduct}}
+    <form method="POST" action="/products/{{this.id}}">
+    <div class="mb-3" hidden>
+    <label for="id" class="form-label">ID sản phẩm:</label>
+    <input name="id" type="text" class="form-control" id="id" value="{{this.id}}" placeholder="Nhập id sản phẩm">
+  </div>
+  <div class="mb-3">
+    <label for="name" class="form-label">Tên sản phẩm:</label>
+    <input name="name" type="text" class="form-control" id="name" value="{{this.name}}" placeholder="Nhập tên sản phẩm">
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Mô tả sản phẩm:</label>
+    <textarea name="description"class="form-control" id="description" placeholder="Nhập Mô tả sản phẩm" rows="1">{{this.description}}</textarea>
+  </div>
+  <div class="mb-3">
+    <label for="image" class="form-label">Thêm hình ảnh:</label>
+    <input name="image" type="text" class="form-control" id="image" value="{{this.image}}" placeholder="Thêm hình ảnh">
+  </div>
+  <div class="mb-3">
+    <label for="price" class="form-label">Giá sản phẩm:</label>
+    <input name="price" type="text" class="form-control" id="price" value="{{this.price}}" placeholder="Nhập Giá sản phẩm">
+  </div>
+  <div class="mb-3">
+    <label for="loai" class="form-label">Loại:</label>
+    {{!-- <input name="loai" type="text" class="form-control" id="loai" value="{{this.loai}}" placeholder="Nhập tên sản phẩm"> --}}
+    <select class="form-select" aria-label="Default select example" name="loai_id" id="loai_id">
+      <option value="{{this.loai_id}}">{{this.loai_id}}</option>
+      <option value="1">giày nam (1)</option>
+      <option value="2">sandal nam (2)</option>
+      <option value="3">giày nữ (3)</option>
+      <option value="4">sandal nữ (4)</option>
+  </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Cập Nhật</button>
+</form>
+{{/each}}
+</div>

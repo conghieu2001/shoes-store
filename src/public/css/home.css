@@ -1,0 +1,90 @@
+#banner {
+  background-image: url(../images/img-banner/banner6.jpg);
+  min-height: 600px;
+  width: 100%;
+  background-size: cover;
+}
+
+.three-banner a {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  border-radius: 4px;
+}
+
+a {
+  transition: all 0.3s ease-in-out;
+}
+
+.bannerEffect img {
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.bannerEffect:after {
+  content: "";
+  display: inline-block;
+  width: 150%;
+  height: 80%;
+  position: absolute;
+  right: 30%;
+  top: -75%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewY(-50deg);
+  transition: all 0.5s ease 0s;
+  z-index: 1;
+}
+
+:after, :before {
+  box-sizing: border-box;
+}
+
+/*  */
+.col-item {
+  width: 100%;
+  overflow: hidden;
+}
+
+.col-item-img {
+  height: 80%;
+  overflow: hidden;
+}
+
+.col-item img {
+  width: 100%;
+}
+
+.item-name {
+  font-size: 15px;
+  height: 20px;
+  width: 100%;
+  line-height: 20px;
+  margin: 10px 0;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  width: 100%;
+}
+
+.item-name a {
+  color: #000000;
+}
+
+.item-price {
+  color: rgb(197, 19, 19);
+  font-weight: 500;
+}
+
+.col-item img {
+  max-width: 100%;
+  transition: all 1s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.col-item:hover img {
+  overflow: hidden;
+  transform: scale(1.3) rotate(-5deg);
+  -webkit-transform: scale(1.3) rotate(-5deg);
+}
+/*# sourceMappingURL=home.css.map */

@@ -1,0 +1,53 @@
+{{!-- <head>
+    <link rel='stylesheet' href='/css/headerShowProduct.css' />
+</head> --}}
+{{#section 'title'}}
+    Chi Tiết Sản Phẩm
+{{/section}}
+
+<div class='mt-5 mb-5 container'>
+    <div class='row'>
+        {{#each showproduct}}
+        <div class='col-md-6'>
+            <div class='left'>
+                <img class='img-fluid item-image' src='{{this.image}}' alt='' />
+            </div>
+        </div>
+        <div class='col-md-6'>
+            <div class='right'>
+                <div>
+                    <h6 class='pb-1 item-description'>{{this.description}}</h6>
+                    <div class='cycle-img-product pb-1'>
+                        <img src='{{this.image}}' />
+                    </div>
+                    <p class="item-id" hidden>{{this.id}}</p>
+                    <p class="item-name"hidden>{{this.name}}</p>
+                    <p class="loai" hidden>{{this.loai_id}}</p>
+                    <p class='price'>{{this.price}} ₫</p>
+                    <div class='btn btn-dark buy addTocart'>Thêm vào giỏ hàng</div>
+                </div>
+                <div class='right-paragrap'>
+                    <h6 class='pb-3'>PHÍ VẬN CHUYỂN TOÀN QUỐC</h6>
+                    <div class='pb-3'>
+                        <h6 class='mb-0 pb-0'>ĐỔI TRẢ MIỄN PHÍ</h6>
+                        <p class='mb-0'>
+                            Hỗ trợ dổi trả sản phẩm trong vòng 3 đến 5 ngày, nếu
+                            không vừa size, sản phẩm bị lỗi (giữ sản phẩm sạch
+                            và chưa qua sử dụng) bạn sẽ đổi hoặc trả sản phẩm mà
+                            không tốn phí.
+                        </p>
+                    </div>
+                    <div>
+                        <h6 class='mb-0 pb-0'>THANH TOÁN</h6>
+                        <p>(Thanh toán khi nhận hàng)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+{{#section 'js'}}
+<script src="/js/showproduct.js"></script>
+{{/section}}

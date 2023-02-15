@@ -1,0 +1,15 @@
+.stored-trash-count {
+    position: relative;
+}
+.count-delete {
+    top: -5px;
+    right: -12px;
+    position: absolute;
+    background: red;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 16px;
+    color: #fff;
+}

@@ -1,0 +1,204 @@
+<header>
+    <nav class='navbar navbar-expand-lg'>
+        <div class='container-fluid'>
+            <a class='navbar-brand ms-lg-5' href='/'><img
+                    id='Logo'
+                    src='/images/logo.png'
+                    alt='Logo'
+                /></a>
+            <button
+                class='navbar-toggler'
+                type='button'
+                data-bs-toggle='collapse'
+                data-bs-target='#navbarSupportedContent'
+                aria-controls='navbarSupportedContent'
+                aria-expanded='false'
+                aria-label='Toggle navigation'
+            >
+                <span>
+                    <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='22'
+                        height='22'
+                        fill='white'
+                        class='bi bi-list'
+                        viewBox='0 0 16 16'
+                    >
+                        <path
+                            fill-rule='evenodd'
+                            d='M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z'
+                        ></path>
+                    </svg>
+                </span>
+            </button>
+            <div
+                class='collapse navbar-collapse nav-item-link'
+                id='navbarSupportedContent'
+            >
+                <ul class='navbar-nav me-auto mb-2 mb-lg-0'>
+                    <li class='nav-item'>
+                        <a
+                            class='nav-link active'
+                            aria-current='page'
+                            href='/'
+                        >Trang Chủ</a>
+                    </li>
+                    <li class='dropdown-hover nav-item dropdown'>
+                        <a
+                            class='nav-link dropdown-toggle active'
+                            href='/collections/nam'
+                            role='button'
+                        >
+                            Nam
+                        </a>
+                        <ul class='dropdown-menu'>
+                            <li><a
+                                    class='dropdown-item'
+                                    href='/collections/nam'
+                                >Sandal</a></li>
+                            <li><a
+                                    class='dropdown-item'
+                                    href='/collections/nam'
+                                >Giày Thể Thao</a></li>
+                            <li><a
+                                    class='dropdown-item'
+                                    href='/collections/nam'
+                                >Giày Tây</a></li>
+                            <li><a
+                                    class='dropdown-item'
+                                    href='/collections/nam'
+                                >Giày Đá Banh</a></li>
+                            <li><a
+                                    class='dropdown-item'
+                                    href='/collections/nam'
+                                >Dép</a></li>
+                            <li><a
+                                    class='dropdown-item'
+                                    href='/collections/nam'
+                                >Phụ Kiện</a></li>
+                        </ul>
+                    </li>
+                    <li class='dropdown-hover nav-item dropdown'>
+                        <a
+                            class='nav-link dropdown-toggle active'
+                            href='/collections/nu'
+                            role='button'
+                        >
+                            Nữ
+                        </a>
+                        <ul class='dropdown-menu'>
+                            <li><a
+                                    class='dropdown-item'
+                                    href='/collections/nu'
+                                >Sandal</a></li>
+                            <li><a
+                                    class='dropdown-item'
+                                    href='/collections/nu'
+                                >Giày Thời Trang</a></li>
+                            <li><a
+                                    class='dropdown-item'
+                                    href='/collections/nu'
+                                >Giày Thể Thao Nữ</a></li>
+                            <li><a
+                                    class='dropdown-item'
+                                    href='/collections/nu'
+                                >Túi Xách</a></li>
+                            <li><a
+                                    class='dropdown-item'
+                                    href='/collections/nu'
+                                >Dép</a></li>
+                            <li><a
+                                    class='dropdown-item'
+                                    href='/collections/nu'
+                                >Phụ Kiện</a></li>
+                        </ul>
+                    </li>
+                    {{!-- <li class='dropdown-hover nav-item dropdown'>
+                        <a class='nav-link active'>Liên Hệ</a>
+                    </li> --}}
+                    <li class='nav-item'>
+                        <a class='nav-link active' href='/post/gioithieu'>Giới
+                            Thiệu</a>
+                    </li>
+                </ul>
+                <form action="/collections/search" method="get">
+                    <input
+                    name="searchP"
+                        class='search-input '
+                        id='search-input'
+                        type='search'
+                        placeholder='Tìm kiếm sản phẩm...'
+                        aria-label='Search'
+                    />
+                    <button class='search-click me-3' id='search-click'>
+                        <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            width='24'
+                            height='24'
+                            fill='currentColor'
+                            class='bi-list bi bi-search-heart-fill'
+                            viewBox='0 0 16 16'
+                        >
+                            <path
+                                d='M6.5 13a6.474 6.474 0 0 0 3.845-1.258h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.008 1.008 0 0 0-.115-.1A6.471 6.471 0 0 0 13 6.5 6.502 6.502 0 0 0 6.5 0a6.5 6.5 0 1 0 0 13Zm0-8.518c1.664-1.673 5.825 1.254 0 5.018-5.825-3.764-1.664-6.69 0-5.018Z'
+                            ></path>
+                        </svg>
+                    </button>
+                </form>
+                <div class='account-click me-3 pt-2' href=''>
+                    <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='24'
+                        height='24'
+                        fill='currentColor'
+                        class='bi-list bi bi-person-fill'
+                        viewBox='0 0 16 16'
+                    >
+                        <path
+                            d='M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'
+                        ></path>
+                    </svg>
+                </div>
+                <div class="show-account">
+                    <span class="icon-up">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                            <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                        </svg>
+                    </span>
+                    <div class="form-show">
+                        <div class="hist-buy">
+                            <a href="/lich-su-mua-hang">
+                                Xem lịch sử mua hàng
+                            </a>
+                        </div>
+                        <div class="login-admin">
+                            <a href="/login">
+                                Đăng nhập bằng Admin.
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cart-item pt-2">
+                    <a class='me-3 cart' href='/cart'>
+                    <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        width='24'
+                        height='24'
+                        fill='currentColor'
+                        class='bi-list bi bi-bag-check-fill'
+                        viewBox='0 0 16 16'
+                    >
+                        <path
+                            fill-rule='evenodd'
+                            d='M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0zm-.646 5.354a.5.5 0 0 0-.708-.708L7.5 10.793 6.354 9.646a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z'
+                        ></path>
+                    </svg>
+                    <span class='count-holder'>
+                        <span class='count'>0</span>
+                    </span>
+                </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

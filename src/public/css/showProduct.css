@@ -1,0 +1,29 @@
+.left {
+    width: 70%;
+    align-items: center;
+    margin: auto auto;
+}
+.right {
+    margin-right: 50px;
+}
+.price {
+    color: red;
+}
+.buy {
+    width: 90%;
+}
+.right-paragrap {
+    padding-top: 30px;
+}
+.right-paragrap *{
+    font-size: 12px;
+}
+img {
+    width: 100%;
+}
+.cycle-img-product img{
+    width: 26px;
+    border-radius: 50%;
+    height: 26px;
+    border: 1px solid gray;
+}

@@ -1,0 +1,49 @@
+{{!-- <head>
+    <link rel='stylesheet' href='/css/headerShowProduct.css' />
+    <link rel='stylesheet' href='/css/showCart.css' />
+</head> --}}
+{{#section 'title'}}
+    Giỏ Hàng
+{{/section}}
+<div class="container mt-5 mb-5 showProductCart">
+    {{!-- <h4 class="noItem text-center">Hiện không có sản phẩm nào trong giỏ hàng!!!</h4> --}}
+    <div>
+        <div class="countProductInCart">
+            
+        </div>
+        <div class="sum d-flex align-items-baseline pt-3">
+            <h6 style="display: none !important;">Tổng tiền: </h6>
+            <p class="sum-price fw-bold text-danger"></p>
+        </div>
+        <div style="display: none;" class="toPay">
+            <a href="/cart/pay" id="toPayLink">
+                <button class="btn btn-danger" id="toPayButton">Tiến hành thanh toán</button>
+            </a>
+        </div>
+    </div>
+</div>
+
+{{!-- form xóa  lấy trên Boostrap--}}
+<div class="modal" tabindex="-1" id="model-delete">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Xóa sản phẩm</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Bạn có chắc chắn muốn xóa sản phẩm này khỏi giỏ hàng ?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
+        <button type="button" class="btn btn-primary" id="btn-delete">Đồng ý</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{!-- <script src="/js/cart.js"></script> --}}
+{{!-- <script src="/js/showCart.js"></script> --}}
+{{#section 'js'}}
+<script src="/js/showCart.js"></script>
+{{/section}}

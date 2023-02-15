@@ -1,0 +1,43 @@
+{{!-- <head>
+    <link rel='stylesheet' href='/css/headerShowProduct.css' />
+    <link rel='stylesheet' href='/css/histBuy.css' />
+</head> --}}
+{{#section 'title'}}
+    Chi Tiết Hóa Đơn
+{{/section}}
+
+<div class="container pt-5 pb-5 showHistB">
+    <div class="row">
+        {{#each showHis}}
+            <div class="col-4 mt-5">
+                <p><i class="fa-solid fa-user me-2"></i>Thông tin cá nhân</p>
+                <p>Họ tên: <strong>{{this.user_name}}</strong></p>
+                <p>Số điện thoại: <strong>{{this.user_phone}}</strong></p>
+            </div>
+            <div class="col-8 mt-4">
+                <h3>Đơn hàng đã mua gần đây</h3>
+                    <table class="table mt-4">
+                        <thead>
+                            <tr>
+                                <th scope="col">Sản phẩm</th>
+                                <th scope="col">Mô tả</th>
+                                <th scope="col">Sl</th>
+                                <th scope="col">Giá</th>
+                                <th scope="col">Ngày</th>
+                                {{!-- <th scope="col">Tổng giá</th> --}}
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="hisImg"><img src="{{this.image}}" alt=""></td>
+                                <td class="hisDes">{{this.description}}</td>
+                                <td class="hisQua">{{this.quantity}}</td>
+                                <td class="hisPri">{{this.price}}</td>
+                                <td class="hisTran">{{this.date_transaction}}</td>
+                            </tr>
+                        </tbody>
+                </table>
+            </div>
+        {{/each}}
+    </div>
+</div>
